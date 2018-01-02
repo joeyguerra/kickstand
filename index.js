@@ -1,2 +1,2 @@
-const Builder = require("./lib/Builder")
-module.exports = Builder
+const SiteGenerator = require("./lib/SiteGenerator")
+module.exports = SiteGenerator

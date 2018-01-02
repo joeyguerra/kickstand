@@ -7,7 +7,7 @@ const {File, Folder} = require("./lib/Dir")
 const root = __dirname
 const layoutsFolder = Path.join(root, "/templates/layouts")
 const pagesFolder = Path.join(root, "/templates/pages")
-const Builder = require("./index")
+const SiteGenerator = require("./index")
 
 Promise.all([Folder.create("templates"),
     Folder.create("templates/layouts"),
@@ -24,7 +24,7 @@ server.createServer(app).listen(port, ()=>{
 })
 
 app.use(express.static("public"))
-Builder.configure(pagesFolder, layoutsFolder)
+SiteGenerator.configure(pagesFolder, layoutsFolder)
     .run()
     .then(async files => {
         for(let i = 0; i < files.length; i++){
