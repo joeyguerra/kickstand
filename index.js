@@ -1,2 +1,3 @@
 const SiteGenerator = require("./lib/SiteGenerator")
-module.exports = SiteGenerator
+const {File, Folder} = require("./lib/Dir")
+module.exports = {SiteGenerator, File, Folder}

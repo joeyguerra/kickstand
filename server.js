@@ -3,11 +3,10 @@ const app = express()
 const server = require("http")
 const port = process.env.PORT || 3000
 const Path = require("path")
-const {File, Folder} = require("./lib/Dir")
 const root = __dirname
 const layoutsFolder = Path.join(root, "/templates/layouts")
 const pagesFolder = Path.join(root, "/templates/pages")
-const SiteGenerator = require("./index")
+const {SiteGenerator, File, Folder} = require("./index")
 
 Promise.all([Folder.create("templates"),
     Folder.create("templates/layouts"),
