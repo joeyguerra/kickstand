@@ -23,8 +23,7 @@ server.createServer(app).listen(port, ()=>{
 })
 
 app.use(express.static("public"))
-SiteGenerator.configure(pagesFolder, layoutsFolder)
-    .run()
+SiteGenerator.run(pagesFolder, layoutsFolder)
     .then(async files => {
         for(let i = 0; i < files.length; i++){
             let t = files[i]
