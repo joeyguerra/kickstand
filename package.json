@@ -1,6 +1,6 @@
 {
   "name": "kickstand",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Static site generator with Express + Handlebars (and Markdown)",
   "main": "index.js",
   "directories": {
