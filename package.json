@@ -22,7 +22,7 @@
     "test": "mocha tests/**/*.js",
     "test:dev": "mocha tests/**/*.js --watch",
     "start": "node server.js",
-    "dev": "nodemon --watch ./templates -e js,html,md,css server.js"
+    "dev": "nodemon server.js --watch ./templates -e js,html,md,css server.js"
   },
   "repository": {
     "type": "git",
