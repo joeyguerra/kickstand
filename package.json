@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "description": "Static site generator with Express + Handlebars (and Markdown)",
   "main": "index.js",
+  "engines": {
+    "node": "^14.5.0"
+  },
   "directories": {
     "lib": "lib",
     "test": "tests"

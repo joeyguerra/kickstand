@@ -26,6 +26,6 @@ describe("should render in layout", ()=>{
             return t.template({})
         })
         assert.ok(built.length > 0)
-        assert.ok(built.join("\n").indexOf("<!doctype") > -1)
+        assert.ok(built.join("\n").indexOf("<!DOCTYPE") > -1)
     })
 })
