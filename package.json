@@ -12,14 +12,14 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "handlebars": "^4.5.3",
-    "markdown-it": "^8.4.2",
-    "markdown-it-meta": "^0.0.1",
-    "mkdirp": "^0.5.1"
+    "handlebars": "^4.7.6",
+    "markdown-it": "^12.0.2",
+    "markdown-it-meta": "0.0.1",
+    "mkdirp": "^1.0.4"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "nodemon": "^1.19.1"
+    "mocha": "^8.2.0",
+    "nodemon": "^2.0.6"
   },
   "scripts": {
     "test": "mocha tests/**/*.js",
