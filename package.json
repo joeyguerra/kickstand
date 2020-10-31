@@ -8,7 +8,7 @@
   },
   "directories": {
     "lib": "lib",
-    "test": "tests"
+    "test": "examples"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -25,7 +25,7 @@
     "test": "mocha examples/**/*.mjs --parallel",
     "test:dev": "mocha examples/**/*.mjs --watch --parallel",
     "start": "node server.mjs",
-    "dev": "nodemon server.mjs --watch ./templates -e js,mjs,html,md,css"
+    "dev": "nodemon server.mjs --ignore public/ -e js,mjs,html,md,css"
   },
   "repository": {
     "type": "git",
