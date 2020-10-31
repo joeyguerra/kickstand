@@ -1,13 +1,13 @@
 import express from "express"
 import server from "http"
 import path from "path"
+import {SiteGenerator, File, Folder} from "./index.mjs"
 
 const app = express()
 const port = process.env.PORT || 3000
 const root = path.resolve()
 const layoutsFolder = path.join(root, "/templates/layouts")
 const pagesFolder = path.join(root, "/templates/pages")
-const {SiteGenerator, File, Folder} = require("./index")
 
 Promise.all([Folder.create("templates"),
     Folder.create("templates/layouts"),

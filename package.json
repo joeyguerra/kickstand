@@ -22,8 +22,8 @@
     "nodemon": "git://github.com/joeyguerra/nodemon.git#master"
   },
   "scripts": {
-    "test": "mocha tests/**/*.mjs --parallel",
-    "test:dev": "mocha tests/**/*.mjs --watch --parallel",
+    "test": "mocha examples/**/*.mjs --parallel",
+    "test:dev": "mocha examples/**/*.mjs --watch --parallel",
     "start": "node server.mjs",
     "dev": "nodemon server.mjs --watch ./templates -e js,mjs,html,md,css server.mjs"
   },
