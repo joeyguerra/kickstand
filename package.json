@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "mocha": "^8.2.0",
-    "nodemon": "^2.0.6"
+    "nodemon": "git://github.com/joeyguerra/nodemon.git#master"
   },
   "scripts": {
     "test": "mocha tests/**/*.js",
