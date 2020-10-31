@@ -1,11 +1,12 @@
-const express = require("express")
+import express from "express"
+import server from "http"
+import path from "path"
+
 const app = express()
-const server = require("http")
 const port = process.env.PORT || 3000
-const Path = require("path")
-const root = __dirname
-const layoutsFolder = Path.join(root, "/templates/layouts")
-const pagesFolder = Path.join(root, "/templates/pages")
+const root = path.resolve()
+const layoutsFolder = path.join(root, "/templates/layouts")
+const pagesFolder = path.join(root, "/templates/pages")
 const {SiteGenerator, File, Folder} = require("./index")
 
 Promise.all([Folder.create("templates"),
@@ -29,7 +30,7 @@ SiteGenerator.run(pagesFolder, layoutsFolder)
             let t = files[i]
             let newFilePath = t.file.replace(pagesFolder, "")
             try{
-                let b = await File.write(Path.join(root, "/public/", newFilePath), t.template({}))
+                let b = await File.write(path.join(root, "/public/", newFilePath), t.template({}))
             } catch(e){
                 console.error(e)
             }

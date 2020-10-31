@@ -1,9 +1,10 @@
-const SiteGenerator = require("../lib/SiteGenerator.js")
-const Path = require("path")
-const {File, Folder} = require("../lib/Dir")
-const TEMPALTES_PAGES = Path.join(__dirname, "templates/pages")
-const TEMPALTES_LAYOUTS = Path.join(__dirname, "templates/layouts")
-const Assert = require("assert")
+import SiteGenerator from "../lib/SiteGenerator.mjs"
+import path from "path"
+import { File } from "../lib/Dir.mjs"
+
+const TEMPALTES_PAGES = path.join(__dirname, "templates/pages")
+const TEMPALTES_LAYOUTS = path.join(__dirname, "templates/layouts")
+const assert = require("assert")
 
 describe("Test Site Generator API", ()=>{
     it("Should support meta data in markdown templates for contextual information used in the application.", async ()=> {
@@ -12,6 +13,6 @@ describe("Test Site Generator API", ()=>{
         let markdownFile = await File.read(`${TEMPALTES_PAGES}/markdown-with-layout.md`)
         let obj = SiteGenerator.renderPageObject(`${TEMPALTES_PAGES}/markdown-with-layout.md`, markdownFile.data)
         let html = obj.template({})
-        Assert.ok(html.indexOf("<h1>Test Document</h1>") > -1)
+        assert.ok(html.indexOf("<h1>Test Document</h1>") > -1)
     })
 })
